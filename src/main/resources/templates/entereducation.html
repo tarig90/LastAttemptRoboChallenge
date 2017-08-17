@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h1>Please Input Education Details</h1>
+
+<form action="#" th:action="@{/entereducation}" th:object="${neweduc}" method="post">
+    <!--<input type="hidden" th:field="*{id}" />-->
+
+    <p>Enter School Name <input type="text" th:field="*{schoolName}"/></p>
+
+    <!--<span class="container" th:if="${#fields.hasErrors('schoolName')}" th:errors="*{schoolName}"> School Name</span>-->
+
+    <p>Enter Year of Graduation <input type="date" th:field="*{yearOfGraduation}"/></p>
+
+    <!--<span th:if="${#fields.hasErrors('yearOfGraduation')}" th:errors="*{yearOfGraduation}"> Year of Graduation</span></p>-->
+
+
+    <input type="submit" value="Enter Resume Details"/>
+    <input type="reset" value="Reset"/>
+
+</form>
+</body>
+</html>

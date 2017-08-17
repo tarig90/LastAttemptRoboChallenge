@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<a href="/">Show All Courses</a><br />
+Name :<span th:text="${skill.skillOne}" ></span><br />
+Email Address :<span th:text="${skill.skillTwo}" ></span><br />
+
+<a th:href="@{/delete/{id}(id=${skill.id})}">Delete this Skill</a>
+</body>
+
+</html>

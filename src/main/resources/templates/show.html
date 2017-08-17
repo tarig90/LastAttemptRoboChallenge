@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Show All Details</a><br />
+First Name :<span th:text="${resume.firstName}" ></span><br />
+Last Name :<span th:text="${resume.lastName}" ></span><br />
+Email Address :<span th:text="${resume.emailAddress}" ></span><br />
+
+<a th:href="@{/delete/{id}(id=${resume.id})}">Delete this Resume</a>
+</body>
+</html>

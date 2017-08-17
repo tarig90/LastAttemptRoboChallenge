@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${skill}"
+      method="post">
+    <input type="hidden" th:field="*{id}" />
+    Name :<input type="text" th:field="*{skillOne}" />
+    <span th:if="${#fields.hasErrors('skillOne')}"
+          th:errors="*{skillOne}"></span><br />
+    Email Address :<input type="text" th:field="*{skillTwo}" />
+    <span th:if="${#fields.hasErrors('skillTwo')}"
+          th:errors="*{skillTwo}"></span><br />
+
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<table>
+
+    <tr>
+        <td> First Name</td>
+        <td> Last Name</td>
+        <td> Candidadte Email</td>
+
+
+    </tr>
+
+    <tr th:each="reso:${resumeObjects}">
+        <td><p th:text="${reso.firstName}"/></td>
+        <td><p th:text="${reso.lastName}"/></td>
+        <td><p th:text="${reso.emailAddress}"/></td>
+        <td>
+            <a th:href="@{/update/{id}(id=${reso.id})}">Update</a>
+            <!--<a th:href="@{/detail/{id}(id=${course.id})}">Details</a> - -->
+            <!--<a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>-->
+        </td>
+
+    </tr>
+
+    <tr>
+        <td><p>School Name</p></td>
+        <td><p>Graduation Date</p></td>
+
+    </tr>
+
+    <tr th:each="edu:${resumeObjects.education}">
+
+        <td><p th:text="${edu.schoolName}"/></td>
+        <td><p th:text="${edu.yearOfGraduation}"/></td>
+        <td>
+            <a th:href="@{/updateEdu/{id}(id=${edu.id})}">Update</a>
+            <!--<a th:href="@{/detail/{id}(id=${course.id})}">Details</a> - -->
+            <<a th:href="@{/delete/{id}(id=${edu.id})}">Delete</a>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td> Title </td>
+        <td> Company Name</td>
+        <td> Duty 1 </td>
+        <td> Duty 2 </td>
+    </tr>
+
+    <tr th:each="exp:${resumeObjects.experience}">
+
+        <td><p th:text="${exp.title}"/></td>
+        <td><p th:text="${exp.companyName}"/></td>
+        <td><p th:text="${exp.duty1}"/></td>
+        <td><p th:text="${exp.duty2}"/></td>
+        <td>
+            <a th:href="@{/updateExp/{id}(id=${exp.id})}">Update</a>
+            <!--<a th:href="@{/detail/{id}(id=${course.id})}">Details</a> - -->
+            <a th:href="@{/delExpr/{id}(id=${exp.id})}">Delete</a>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td> Skill One</td>
+        <td> Skill Two </td>
+
+    </tr>
+
+    <tr th:each="skil:${resumeObjects.skillSet}">
+
+        <td><p th:text="${skil.skillOne}"/></td>
+        <td><p th:text="${skil.skillTwo}"/></td>
+        <td>
+            <a th:href="@{/updateSkl/{id}(id=${skil.id})}">Update</a>
+            <!--<a th:href="@{/detail/{id}(id=${course.id})}">Details</a> - -->
+            <a th:href="@{/delSkill/{id}(id=${skil.id})}">Delete</a>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

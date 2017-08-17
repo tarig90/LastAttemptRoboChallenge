@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Experience Displayed Report</h1>
+
+<table>
+
+    <tr>
+        <td><p>Title</p></td>
+        <td><p>Company Name</p></td>
+        <td><p>Duty1</p></td>
+        <td><p>Duty2</p></td>
+
+    </tr>
+
+
+    <th:block th:each="expo:${robo.experience}">
+        <tr>
+            <td><p th:text="${expo.title}"/></td>
+            <td><p th:text="${expo.companyName}"/></td>
+            <td><p th:text="${expo.duty1}"/></td>
+            <td><p th:text="${expo.duty2}"/></td>
+
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

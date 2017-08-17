@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Add a Resume Details</a><br />
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+
+    </tr>
+    <tr th:each="resume : ${resumes}">
+        <td th:text="${resume.firstName}"></td>
+        <td th:text="${resume.lastName}"></td>
+        <td th:text="${resume.emailAddress}"></td>
+
+        <td>
+            <a th:href="@{/update/{id}(id=${resume.id})}">Update</a>
+            <a th:href="@{/detail/{id}(id=${resume.id})}">Details</a>
+            <a th:href="@{/delete/{id}(id=${resume.id})}">Delete</a>
+
+            <a href="entersetofskills.htmla">Add Skills</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

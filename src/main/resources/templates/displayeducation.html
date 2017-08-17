@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table>
+
+    <tr>
+        <td><p>School Name</p></td>
+        <td><p>Year of Graduation</p></td>
+
+    </tr>
+
+
+    <th:block th:each="educs:${educalistas}">
+        <tr>
+            <td><p th:text="${educs.schoolName}"/></td>
+            <td><p th:text="${educs.yearOfGraduation}"/></td>
+
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
