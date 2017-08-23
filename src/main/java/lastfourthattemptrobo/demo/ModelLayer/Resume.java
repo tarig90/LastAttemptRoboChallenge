@@ -1,5 +1,7 @@
 package lastfourthattemptrobo.demo.ModelLayer;
 
+import org.hibernate.validator.constraints.Email;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +20,7 @@ public class Resume
     private String lastName;
     private String name;
     @NotNull
+    @Email
     private String emailAddress;
 
     private ArrayList<Experience> experience;

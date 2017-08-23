@@ -29,12 +29,19 @@ public class MainController {
     @Autowired
     ExperienceRepository experienceRepository;
 
+    @RequestMapping("/welcome")
+    public String welcomePage()
+    {
+        return "welcome";
+    }
 
     @RequestMapping("/")
     public String listCourses(Model model){
         model.addAttribute("resumes", resumeRepository.findAll());
         return "list";
     }
+
+
 
     @GetMapping("/add")
     public String courseForm(Model model){
@@ -85,7 +92,7 @@ public class MainController {
     public String delEducation(@PathVariable("id") long id)
     {
         educationalRepository.delete(id);
-        return "redirect:/";
+        return "redirect:/displayresume";
     }
 
     //
@@ -125,8 +132,8 @@ public class MainController {
     @RequestMapping("/delSkill/{id}")
     public String delSkills(@PathVariable("id") long id)
     {
-        educationalRepository.delete(id);
-        return "redirect:/";
+        skillsRepository.delete(id);
+        return "redirect:/displayresume";
     }
 
     @RequestMapping("/updateSkl/{id}")
@@ -164,8 +171,8 @@ public class MainController {
     @RequestMapping("/delExpr/{id}")
     public String delExperience(@PathVariable("id") long id)
     {
-        educationalRepository.delete(id);
-        return "redirect:/";
+        experienceRepository.delete(id);
+        return "redirect:/displayresume";
     }
 
     @RequestMapping("/updateExp/{id}")

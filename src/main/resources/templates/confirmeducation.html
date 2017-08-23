@@ -1,22 +1,175 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="index.html">Start Bootstrap</a>-->
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>-->
+                <!--<ul class="dropdown-menu">-->
+                <!--<li>-->
+                <!--<a href="portfolio-1-col.html">1 Column Portfolio</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="portfolio-2-col.html">2 Column Portfolio</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="portfolio-3-col.html">3 Column Portfolio</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="portfolio-4-col.html">4 Column Portfolio</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="portfolio-item.html">Single Portfolio Item</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>-->
+                <!--<ul class="dropdown-menu">-->
+                <!--<li>-->
+                <!--<a href="blog-home-1.html">Blog Home 1</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="blog-home-2.html">Blog Home 2</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="blog-post.html">Blog Post</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>-->
+                <!--<ul class="dropdown-menu">-->
+                <!--<li>-->
+                <!--<a href="full-width.html">Full Width Page</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="sidebar.html">Sidebar Page</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="faq.html">FAQ</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="404.html">404</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="pricing.html">Pricing Table</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('http://www.circlebrands.co.uk/content/images/Identity/bain_id_1.jpg');"></div>
+            <div class="carousel-caption">
+                <h2 style="color:#5bc0de ">Build your future </h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('https://www.privcap.com/wp-content/uploads/2016/04/McKinsey__Company_logo.png');"></div>
+            <div class="carousel-caption">
+                <h2 style="color:#5bc0de ">Get employed by fortune 500 Global</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('http://www.cbronline.com/wp-content/uploads/2016/07/what-is-accenture.jpg');"></div>
+            <div class="carousel-caption">
+                <h2 style="color: #5bc0de">Stand out  in the interview process </h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
 <h1>Education added successfully</h1>
+<div class="panel panel-default">
+    <div class="panel-heading">Panel heading</div>
+    <div class="panel-body">
+        <p>...</p>
+    </div>
+    <h2>Your Educatation has been saved successfully</h2>
+    <table class="table">
+        <tr><th>School Name</th>
+        <th>Year Of Graduation</th></tr>
+        <tr>
+<td><p th:text="' ' + ${neweduc.schoolName}"/></td>
+<td><p th:text="' ' + ${neweduc.yearOfGraduation}"/></td>
+        </tr>
+    </table>
+</div>
+<ul class="pager" style="padding-bottom: 64px; margin-bottom: 40%" >
+    <li><a href="enterexperience.html">Next >></a></li>
+    <h2 style="background-color: aliceblue; color: blueviolet" > </h2>
+    <li><a href="entereducation.html"> << Previous</a></li>
+</ul>
+<!--<td><a href="entereducation.html">Add more Education</a></td>-->
+<!--<a href="enterexperience">Add Previous Employment Experiences</a>-->
+<script src="js/jquery.js"></script>
 
-<td><p th:text="'School Name ' + ${neweduc.schoolName}"/></td>
-<td></td><p th:text="'Year of Graduation: ' + ${neweduc.yearOfGraduation}"/>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-<td>
-    <a th:href="@{/update/{id}(id=${neweduc.id})}">Update</a>
-    <a th:href="@{/detail/{id}(id=${neweduc.id})}">Details</a>
-    <a th:href="@{/delete/{id}(id=${neweduc.id})}">Delete</a>
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 9000 //changes the speed
+    })
+</script>
 
-    <a href="enterexperience.html">Add Experience</a>
-</td>
-<a href="enterexperience">Add Previous Employment Experiences</a>
 </body>
 </html>
