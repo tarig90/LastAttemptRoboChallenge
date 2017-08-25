@@ -141,10 +141,10 @@
     <input type="hidden" th:field="*{id}" />
 
     <h4><i class="fa fa-fw fa-check"></i> First Skill</h4><input type="text" th:field="*{skillOne}"/></p>
-    <span class="container" th:if="${#fields.hasErrors('skillOne')}" th:errors="*{skillOne}">Skill ONe  </span>
+    <div class="alert alert-danger fade in" th:if="${#fields.hasErrors('skillOne')}" th:errors="*{skillOne}">Skill ONe  </div>
 
     <h4><i class="fa fa-fw fa-check"></i> Second Skill</h4> <input type="text" th:field="*{skillTwo}"/></p>
-    <span class="container" th:if="${#fields.hasErrors('skillTwo')}" th:errors="*{skillTwo}"> Skill two </span>
+    <div class="alert alert-danger fade in" th:if="${#fields.hasErrors('skillTwo')}" th:errors="*{skillTwo}"> Skill two </div>
 
 
         <input type="submit" value="Save Skills" class="btn btn-lg btn-default btn-block" />

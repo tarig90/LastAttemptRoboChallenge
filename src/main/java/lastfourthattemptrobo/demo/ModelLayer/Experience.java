@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Experience {
@@ -13,12 +14,16 @@ public class Experience {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
+    @Size(min=2, max=10)
     private String title;
     @NotNull
+    @Size(min=3, max=20)
     private String companyName;
     @NotNull
+    @Size(min=3, max=20)
     private String duty1;
     @NotNull
+    @Size(min=3, max=20)
     private String duty2;
 
     public long getId() {

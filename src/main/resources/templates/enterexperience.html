@@ -143,17 +143,17 @@
     <input type="hidden" th:field="*{id}" />
 
     <h4><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i> Previous Job Title</h4> <input type="text" th:field="*{title}"/></p>
-    <span class="container" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"> Title</span>
+    <div class="alert alert-danger fade in" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"> Title</div>
 
 
     <h4><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> Previous Employer Name</h4> <input type="text" th:field="*{companyName}"/></p>
-    <span class="container" th:if="${#fields.hasErrors('companyName')}" th:errors="*{companyName}"> Company Name</span>
+    <div class="alert alert-danger fade in" th:if="${#fields.hasErrors('companyName')}" th:errors="*{companyName}"> Company Name</div>
 
     <h4><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> First Duty</h4><input type="text" th:field="*{duty1}"/></p>
-    <span class="container" th:if="${#fields.hasErrors('duty1')}" th:errors="*{duty1}"> Duty1</span>
+    <div class="alert alert-danger fade in" th:if="${#fields.hasErrors('duty1')}" th:errors="*{duty1}"> Duty1</div>
 
     <h4><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i> Second Duty</h4> <input type="text" th:field="*{duty2}"/></p>
-   <span class="container" th:if="${#fields.hasErrors('duty2')}" th:errors="*{duty2}"> Duty2</span>
+    <div class="alert alert-danger fade in" class="container" th:if="${#fields.hasErrors('duty2')}" th:errors="*{duty2}"> Duty2</div>
 
 
     <input type="submit" value="Save" class="btn btn-lg btn-default btn-block"/>

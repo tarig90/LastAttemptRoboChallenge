@@ -1,5 +1,6 @@
 package lastfourthattemptrobo.demo.ModelLayer;
 
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.Date;
 @Entity
 public class EducationalAchievements {
@@ -17,9 +19,10 @@ public class EducationalAchievements {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
+    @Size(min=3, max =30)
     private String schoolName;
     @NotNull
-    @DateTimeFormat(pattern = "MM-DD-YYYY")
+    @DateTimeFormat(pattern ="MM/dd/yyyy")
     private Date yearOfGraduation;
 
     public long getId() {

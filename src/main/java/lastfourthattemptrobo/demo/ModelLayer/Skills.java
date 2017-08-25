@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Skills
@@ -14,8 +15,10 @@ public class Skills
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
+    @Size(min=4,max=40)
     private String skillOne;
     @NotNull
+    @Size(min=4,max=40)
     private String skillTwo;
 
     public long getId() {
