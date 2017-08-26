@@ -14,8 +14,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.OverridesAttribute;
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -122,18 +124,26 @@ public class MainController {
     public String enterSkills(Model model)
     {
        model.addAttribute("newskill" , new Skills());
+
+
         return  "entersetofskills";
    }
 
 
    @PostMapping("/entersetofskills")
-   public String postSkills(@Valid @ModelAttribute("newskill") Skills skills, BindingResult bindingResult)
+   public String postSkills(@Valid @ModelAttribute("newskill") Skills skills, BindingResult bindingResult, Model model)
    {
        if(bindingResult.hasErrors())
        {
            return "entersetofskills";
        }
+
        skillsRepository.save(skills);
+
+     Object test = skillsRepository.count();
+
+
+       model.addAttribute("calc",test);
        return "skillsconfirmed";
     }
 
@@ -177,6 +187,7 @@ public class MainController {
         {
             return "enterexperience";
         }
+
 
        experienceRepository.save(experience);
        return  "experienceconfirmed";

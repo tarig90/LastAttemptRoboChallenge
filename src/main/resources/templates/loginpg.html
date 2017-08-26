@@ -31,18 +31,7 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
 
-            </ul>
         </div>
     </div>
 </nav>
@@ -91,14 +80,39 @@
 <div th:if="param.logout">
 
 </div>
+<div class="panel panel-default">
 <form th:action="@{/loginpg}" method="post">
 
-    <div><label>User Name :<input type="text" name="username"></label></div>
-    <div><label>Password :<input type="password" name="password"></label></div>
-    <div><input type="submit" value="Sign in"/> </div>
-
+    <div><h4><i class="fa fa-fw fa-check"></i> User Name </h4><input type="text" name="username"></label></div>
+    <div><h4><i class="fa fa-fw fa-check"></i> Password</h4><input type="password" name="password"></label></div>
+    <div><input type="submit" value="Sign in" class="btn btn-primary btn-lg"/> </div>
 
 </form>
+</div>
+
+
+<!--<div class="panel panel-default">-->
+    <!--<form action="#" th:action="@{/entereducation}" th:object="${neweduc}" method="post" >-->
+        <!--&lt;!&ndash;<input type="hidden" th:field="*{id}" />&ndash;&gt;-->
+
+        <!--<h4><i class="fa fa-fw fa-check"></i> School Name</h4> <input type="text" th:field="*{schoolName}"/></p>-->
+
+        <!--<div class="alert alert-danger fade in" th:if="${#fields.hasErrors('schoolName')}"-->
+             <!--th:errors="*{schoolName}"></div><br />-->
+
+        <!--<h4><i class="fa fa-fw fa-check"></i> Graduation Date use the following format(MM/dd/yyyy) </h4> <input type="date" th:field="*{yearOfGraduation}"/></p>-->
+
+        <!--<div class="alert alert-danger fade in" th:if="${#fields.hasErrors('yearOfGraduation')}"-->
+             <!--th:errors="*{yearOfGraduation}" ></div><br />-->
+
+        <!--<input type="submit" value="Save" class="btn btn-lg btn-default btn-block" />-->
+    <!--</form>-->
+<!--</div>-->
+
+
+
+
+
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
