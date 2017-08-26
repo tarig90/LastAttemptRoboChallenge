@@ -20,10 +20,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     {
         http
                 .authorizeRequests()
-                .antMatchers("/css/**","/js/**").permitAll()
-                .antMatchers("/")
-                .access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
-                .antMatchers("/admin").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/","/css/**","/js/**").permitAll()
+
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/loginpg").permitAll()
