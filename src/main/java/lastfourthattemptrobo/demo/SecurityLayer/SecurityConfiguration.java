@@ -20,8 +20,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     {
         http
                 .authorizeRequests()
-                .antMatchers("/","/css/**","/js/**").permitAll()
-
+                .antMatchers("/css/**","/js/**","/font-awesome/**","/fonts/**").permitAll()
+                .antMatchers("/")
+                .access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/loginpg").permitAll()
@@ -35,7 +36,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(AuthenticationManagerBuilder auth)throws Exception
     {
-        auth.inMemoryAuthentication().withUser("user").password("password").roles("USER");
+        auth.inMemoryAuthentication().withUser("newuser").password("newuserpa$$").roles("USER");
         auth.inMemoryAuthentication().withUser("tarig").password("pass").roles("Admin");
     }
 
